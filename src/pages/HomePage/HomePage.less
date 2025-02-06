@@ -1,0 +1,28 @@
+.main {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 150px);
+  padding-top: 60px;
+}
+
+.container {
+  width: calc(100vw - 156px);
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+    padding-top: 0;
+    width: calc(100vw - 20px);
+    height: 100vh;
+    padding: 10px;
+  }
+}
