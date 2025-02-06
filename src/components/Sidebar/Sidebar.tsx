@@ -22,14 +22,18 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
         <hr className="hrline" />
         <Button
           icon="icons/bold.png"
+          isActive={editor?.isActive("bold")}
           onClick={() => {
             if (editor) {
               editor.chain().focus().toggleBold().run();
             }
           }}
+
         />
         <Button
           icon="icons/underline.png"
+          isActive={editor?.isActive("underline")}
+        
           onClick={() => {
             if (editor) {
               editor.chain().focus().toggleUnderline().run();
@@ -39,6 +43,8 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
 
         <Button
           icon="icons/italic.png"
+          
+          isActive={editor?.isActive("italic")}
           onClick={() => {
             if (editor) {
               editor.chain().focus().toggleItalic().run();
@@ -47,6 +53,8 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
         />
         <Button icon="icons/function.png" onClick={() => {}} />
         <Button
+
+          isActive={editor?.isActive("codeBlock")}
           icon="icons/parentesis.png"
           onClick={() => {
             if (editor) {
