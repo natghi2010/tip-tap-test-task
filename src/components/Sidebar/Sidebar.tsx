@@ -51,13 +51,22 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
             }
           }}
         />
-        <Button icon="icons/function.png" onClick={() => {}} />
+        <Button icon="icons/function.png"
+        isActive={editor?.isActive("strike")}
+        
+        onClick={() => {
+          if (editor) {
+        
+            editor.chain().focus().toggleStrike().run();
+          }
+        }} />
         <Button
 
           isActive={editor?.isActive("codeBlock")}
           icon="icons/parentesis.png"
           onClick={() => {
             if (editor) {
+        
               editor.chain().focus().toggleCodeBlock().run();
             }
           }}
