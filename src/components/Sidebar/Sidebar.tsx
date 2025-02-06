@@ -63,6 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
           }}
         />
         <Button icon="icons/link.png" onClick={() => {}} />
+      
         <hr className="hrline" />
       </div>
       <div></div>
