@@ -4,8 +4,8 @@ import "./Button.less";
 interface ButtonProps {
   icon: string;
   onClick: () => void;
-  altText?: string; // Optional prop for accessibility
-  isActive?: boolean; // Optional prop to highlight the button as active
+  altText?: string; 
+  isActive?: boolean; 
 }
 
 const Button: React.FC<ButtonProps> = ({ icon, onClick, altText = "icon", isActive = false }) => {
@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ icon, onClick, altText = "icon", isActi
     <button
       className={`buttonIconSidebar ${isActive ? "active" : ""}`}
       onClick={onClick}
-      aria-label={altText} // Accessibility label
+      aria-label={altText} 
       role="button"
     >
       <img src={icon} alt={altText} />
