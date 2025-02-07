@@ -14,7 +14,7 @@ import Document from "@tiptap/extension-document";
 import Paragraph from "@tiptap/extension-paragraph";
 import Text from "@tiptap/extension-text";
 
-import "highlight.js/styles/github.css";
+// import "highlight.js/styles/github.css";
 
 const HomePage: React.FC = () => {
   const lowlight = createLowlight(all);

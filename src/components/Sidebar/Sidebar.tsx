@@ -3,6 +3,7 @@ import "./Sidebar.less";
 import Button from "../Button/Button";
 import { Editor } from "@tiptap/react";
 
+
 interface SidebarProps {
   editor: Editor | null;
 }
@@ -12,6 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
     <div className="sidebar">
       <div className="sidebarTop">
         <img src="/icons/GAIA.png" />
+       
         <hr className="hrline" />
         <div className="profile">
           <img src="/profile.jpeg" />
@@ -21,7 +23,8 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
       <div className="editorButtonsContainer">
         <hr className="hrline" />
         <Button
-          icon="icons/bold.png"
+       
+       icon="icons/bold.png"
           isActive={editor?.isActive("bold")}
           onClick={() => {
             if (editor) {
@@ -30,6 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ editor }) => {
           }}
 
         />
+       
         <Button
           icon="icons/underline.png"
           isActive={editor?.isActive("underline")}
